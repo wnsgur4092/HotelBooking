@@ -14,6 +14,21 @@
 		BF367A872A36DEA8007B9AB5 /* HotelBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367A862A36DEA8007B9AB5 /* HotelBookingTests.swift */; };
 		BF367A912A36DEA8007B9AB5 /* HotelBookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367A902A36DEA8007B9AB5 /* HotelBookingUITests.swift */; };
 		BF367A932A36DEA8007B9AB5 /* HotelBookingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367A922A36DEA8007B9AB5 /* HotelBookingUITestsLaunchTests.swift */; };
+		BF367AA22A36E057007B9AB5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AA12A36E057007B9AB5 /* HomeView.swift */; };
+		BF367AA42A36E0F7007B9AB5 /* AccomodationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AA32A36E0F7007B9AB5 /* AccomodationView.swift */; };
+		BF367AA62A36E104007B9AB5 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AA52A36E104007B9AB5 /* AboutUsView.swift */; };
+		BF367AA82A36E122007B9AB5 /* EatDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AA72A36E122007B9AB5 /* EatDrinkView.swift */; };
+		BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AA92A36E12A007B9AB5 /* OurStoryView.swift */; };
+		BF367AAC2A36E130007B9AB5 /* SeeDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AAB2A36E130007B9AB5 /* SeeDoView.swift */; };
+		BF367AAF2A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AAE2A36E251007B9AB5 /* Poppins-Regular.ttf */; };
+		BF367AB02A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AAE2A36E251007B9AB5 /* Poppins-Regular.ttf */; };
+		BF367AB12A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AAE2A36E251007B9AB5 /* Poppins-Regular.ttf */; };
+		BF367AB52A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */; };
+		BF367AB62A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */; };
+		BF367AB72A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */; };
+		BF367AB92A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */; };
+		BF367ABA2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */; };
+		BF367ABB2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,16 @@
 		BF367A8C2A36DEA8007B9AB5 /* HotelBookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelBookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF367A902A36DEA8007B9AB5 /* HotelBookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelBookingUITests.swift; sourceTree = "<group>"; };
 		BF367A922A36DEA8007B9AB5 /* HotelBookingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelBookingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF367AA12A36E057007B9AB5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BF367AA32A36E0F7007B9AB5 /* AccomodationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccomodationView.swift; sourceTree = "<group>"; };
+		BF367AA52A36E104007B9AB5 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		BF367AA72A36E122007B9AB5 /* EatDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatDrinkView.swift; sourceTree = "<group>"; };
+		BF367AA92A36E12A007B9AB5 /* OurStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurStoryView.swift; sourceTree = "<group>"; };
+		BF367AAB2A36E130007B9AB5 /* SeeDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeDoView.swift; sourceTree = "<group>"; };
+		BF367AAE2A36E251007B9AB5 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		BF367AB22A36E2B5007B9AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BF367A742A36DEA7007B9AB5 /* HotelBooking */,
+				BF367A792A36DEA8007B9AB5 /* Assets.xcassets */,
 				BF367A852A36DEA8007B9AB5 /* HotelBookingTests */,
 				BF367A8F2A36DEA8007B9AB5 /* HotelBookingUITests */,
 				BF367A732A36DEA7007B9AB5 /* Products */,
@@ -94,9 +120,13 @@
 		BF367A742A36DEA7007B9AB5 /* HotelBooking */ = {
 			isa = PBXGroup;
 			children = (
+				BF367AB22A36E2B5007B9AB5 /* Info.plist */,
 				BF367A752A36DEA7007B9AB5 /* HotelBookingApp.swift */,
 				BF367A772A36DEA7007B9AB5 /* ContentView.swift */,
-				BF367A792A36DEA8007B9AB5 /* Assets.xcassets */,
+				BF367AA02A36E02D007B9AB5 /* ViewModel */,
+				BF367A9F2A36E024007B9AB5 /* View */,
+				BF367AB32A36E5F7007B9AB5 /* Style */,
+				BF367AAD2A36E235007B9AB5 /* Fonts */,
 				BF367A7B2A36DEA8007B9AB5 /* Preview Content */,
 			);
 			path = HotelBooking;
@@ -125,6 +155,43 @@
 				BF367A922A36DEA8007B9AB5 /* HotelBookingUITestsLaunchTests.swift */,
 			);
 			path = HotelBookingUITests;
+			sourceTree = "<group>";
+		};
+		BF367A9F2A36E024007B9AB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF367AA12A36E057007B9AB5 /* HomeView.swift */,
+				BF367AAB2A36E130007B9AB5 /* SeeDoView.swift */,
+				BF367AA92A36E12A007B9AB5 /* OurStoryView.swift */,
+				BF367AA72A36E122007B9AB5 /* EatDrinkView.swift */,
+				BF367AA52A36E104007B9AB5 /* AboutUsView.swift */,
+				BF367AA32A36E0F7007B9AB5 /* AccomodationView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BF367AA02A36E02D007B9AB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF367AAD2A36E235007B9AB5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF367AAE2A36E251007B9AB5 /* Poppins-Regular.ttf */,
+				BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BF367AB32A36E5F7007B9AB5 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF367AAF2A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */,
 				BF367A7D2A36DEA8007B9AB5 /* Preview Assets.xcassets in Resources */,
 				BF367A7A2A36DEA8007B9AB5 /* Assets.xcassets in Resources */,
+				BF367AB92A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +309,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF367AB02A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */,
+				BF367ABA2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +318,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF367AB12A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */,
+				BF367ABB2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF367AB52A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
+				BF367AA22A36E057007B9AB5 /* HomeView.swift in Sources */,
+				BF367AA62A36E104007B9AB5 /* AboutUsView.swift in Sources */,
+				BF367AA42A36E0F7007B9AB5 /* AccomodationView.swift in Sources */,
+				BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */,
 				BF367A782A36DEA7007B9AB5 /* ContentView.swift in Sources */,
+				BF367AAC2A36E130007B9AB5 /* SeeDoView.swift in Sources */,
+				BF367AA82A36E122007B9AB5 /* EatDrinkView.swift in Sources */,
 				BF367A762A36DEA7007B9AB5 /* HotelBookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF367AB62A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
 				BF367A872A36DEA8007B9AB5 /* HotelBookingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF367AB72A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
 				BF367A912A36DEA8007B9AB5 /* HotelBookingUITests.swift in Sources */,
 				BF367A932A36DEA8007B9AB5 /* HotelBookingUITestsLaunchTests.swift in Sources */,
 			);
@@ -419,6 +501,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HotelBooking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotelBooking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,6 +533,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HotelBooking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HotelBooking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
