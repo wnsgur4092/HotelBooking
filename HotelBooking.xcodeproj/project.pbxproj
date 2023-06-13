@@ -29,6 +29,13 @@
 		BF367AB92A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */; };
 		BF367ABA2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */; };
 		BF367ABB2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */; };
+		BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5909132A38701400A63F11 /* BookingDateView.swift */; };
+		BF5909172A38710100A63F11 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5909162A38710100A63F11 /* Poppins-Medium.ttf */; };
+		BF5909182A38710100A63F11 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5909162A38710100A63F11 /* Poppins-Medium.ttf */; };
+		BF5909192A38710100A63F11 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF5909162A38710100A63F11 /* Poppins-Medium.ttf */; };
+		BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */; };
+		BF59091C2A38726000A63F11 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */; };
+		BF59091D2A38726000A63F11 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +76,9 @@
 		BF367AB22A36E2B5007B9AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		BF5909132A38701400A63F11 /* BookingDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDateView.swift; sourceTree = "<group>"; };
+		BF5909162A38710100A63F11 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				BF367AA12A36E057007B9AB5 /* HomeView.swift */,
+				BF5909152A38701700A63F11 /* Booking */,
 				BF367AAB2A36E130007B9AB5 /* SeeDoView.swift */,
 				BF367AA92A36E12A007B9AB5 /* OurStoryView.swift */,
 				BF367AA72A36E122007B9AB5 /* EatDrinkView.swift */,
@@ -182,6 +193,7 @@
 			children = (
 				BF367AAE2A36E251007B9AB5 /* Poppins-Regular.ttf */,
 				BF367AB82A36F136007B9AB5 /* Poppins-Bold.ttf */,
+				BF5909162A38710100A63F11 /* Poppins-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -190,8 +202,17 @@
 			isa = PBXGroup;
 			children = (
 				BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */,
+				BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		BF5909152A38701700A63F11 /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				BF5909132A38701400A63F11 /* BookingDateView.swift */,
+			);
+			path = Booking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +323,7 @@
 				BF367A7D2A36DEA8007B9AB5 /* Preview Assets.xcassets in Resources */,
 				BF367A7A2A36DEA8007B9AB5 /* Assets.xcassets in Resources */,
 				BF367AB92A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */,
+				BF5909172A38710100A63F11 /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5909182A38710100A63F11 /* Poppins-Medium.ttf in Resources */,
 				BF367AB02A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */,
 				BF367ABA2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */,
 			);
@@ -318,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5909192A38710100A63F11 /* Poppins-Medium.ttf in Resources */,
 				BF367AB12A36E251007B9AB5 /* Poppins-Regular.ttf in Resources */,
 				BF367ABB2A36F136007B9AB5 /* Poppins-Bold.ttf in Resources */,
 			);
@@ -338,6 +362,8 @@
 				BF367A782A36DEA7007B9AB5 /* ContentView.swift in Sources */,
 				BF367AAC2A36E130007B9AB5 /* SeeDoView.swift in Sources */,
 				BF367AA82A36E122007B9AB5 /* EatDrinkView.swift in Sources */,
+				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
+				BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
 				BF367A762A36DEA7007B9AB5 /* HotelBookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF367AB62A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
+				BF59091C2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
 				BF367A872A36DEA8007B9AB5 /* HotelBookingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF367AB72A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
+				BF59091D2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
 				BF367A912A36DEA8007B9AB5 /* HotelBookingUITests.swift in Sources */,
 				BF367A932A36DEA8007B9AB5 /* HotelBookingUITestsLaunchTests.swift in Sources */,
 			);

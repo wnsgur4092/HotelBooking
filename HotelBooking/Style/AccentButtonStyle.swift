@@ -1,17 +1,17 @@
 //
-//  PrimaryButtonStyle.swift
+//  AccentButtonStyle.swift
 //  HotelBooking
 //
-//  Created by JunHyuk Lim on 12/6/2023.
+//  Created by JunHyuk Lim on 13/6/2023.
 //
 
 import Foundation
 import SwiftUI
 
-struct PrimaryButtonStyle: ButtonStyle {
+struct AccentButtonStyle: ButtonStyle {
     // MARK: - PROPERTIES
-    let borderColor: Color = Color("PrimaryColor")
-    let textColor: Color = Color("PrimaryColor")
+    let borderColor: Color = Color("AccentColor")
+    let textColor: Color = Color.white
     let font: Font
     
     // MARK: - FUNCTION
@@ -20,13 +20,14 @@ struct PrimaryButtonStyle: ButtonStyle {
             configuration.label
                 .foregroundColor(textColor)
                 .font(font)
+                .padding(.vertical, 16)
+                .frame(maxWidth: .infinity)
+                .background(borderColor)
+                .cornerRadius(8)
         }
-        .padding(.vertical, 16)
-        .frame(maxWidth: .infinity)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(borderColor, lineWidth: 2)
+                .stroke(borderColor, lineWidth: 1)
         )
     }
 }
-
