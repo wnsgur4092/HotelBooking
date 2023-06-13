@@ -36,6 +36,21 @@
 		BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */; };
 		BF59091C2A38726000A63F11 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */; };
 		BF59091D2A38726000A63F11 /* AccentButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */; };
+		BF59091F2A38775300A63F11 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091E2A38775300A63F11 /* BookingViewModel.swift */; };
+		BF5909202A38775300A63F11 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091E2A38775300A63F11 /* BookingViewModel.swift */; };
+		BF5909212A38775300A63F11 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59091E2A38775300A63F11 /* BookingViewModel.swift */; };
+		BF5909232A38792100A63F11 /* BookingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5909222A38792100A63F11 /* BookingRoomView.swift */; };
+		BF5909242A38792100A63F11 /* BookingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5909222A38792100A63F11 /* BookingRoomView.swift */; };
+		BF5909252A38792100A63F11 /* BookingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5909222A38792100A63F11 /* BookingRoomView.swift */; };
+		BF5909272A38793200A63F11 /* RoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5909262A38793200A63F11 /* RoomCard.swift */; };
+		BF5909282A38793200A63F11 /* RoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5909262A38793200A63F11 /* RoomCard.swift */; };
+		BF5909292A38793200A63F11 /* RoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5909262A38793200A63F11 /* RoomCard.swift */; };
+		BF59092B2A38812900A63F11 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092A2A38812900A63F11 /* RoundedCorner.swift */; };
+		BF59092C2A38812900A63F11 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092A2A38812900A63F11 /* RoundedCorner.swift */; };
+		BF59092D2A38812900A63F11 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092A2A38812900A63F11 /* RoundedCorner.swift */; };
+		BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
+		BF5909302A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
+		BF5909312A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +94,11 @@
 		BF5909132A38701400A63F11 /* BookingDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDateView.swift; sourceTree = "<group>"; };
 		BF5909162A38710100A63F11 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentButtonStyle.swift; sourceTree = "<group>"; };
+		BF59091E2A38775300A63F11 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
+		BF5909222A38792100A63F11 /* BookingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingRoomView.swift; sourceTree = "<group>"; };
+		BF5909262A38793200A63F11 /* RoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCard.swift; sourceTree = "<group>"; };
+		BF59092A2A38812900A63F11 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		BF59092E2A3882B400A63F11 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +204,7 @@
 		BF367AA02A36E02D007B9AB5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BF59091E2A38775300A63F11 /* BookingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -203,6 +224,7 @@
 			children = (
 				BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */,
 				BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */,
+				BF59092A2A38812900A63F11 /* RoundedCorner.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -211,6 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				BF5909132A38701400A63F11 /* BookingDateView.swift */,
+				BF5909222A38792100A63F11 /* BookingRoomView.swift */,
+				BF5909262A38793200A63F11 /* RoomCard.swift */,
+				BF59092E2A3882B400A63F11 /* RoomDetailView.swift */,
 			);
 			path = Booking;
 			sourceTree = "<group>";
@@ -354,16 +379,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5909232A38792100A63F11 /* BookingRoomView.swift in Sources */,
 				BF367AB52A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
 				BF367AA22A36E057007B9AB5 /* HomeView.swift in Sources */,
 				BF367AA62A36E104007B9AB5 /* AboutUsView.swift in Sources */,
+				BF5909272A38793200A63F11 /* RoomCard.swift in Sources */,
 				BF367AA42A36E0F7007B9AB5 /* AccomodationView.swift in Sources */,
 				BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */,
 				BF367A782A36DEA7007B9AB5 /* ContentView.swift in Sources */,
 				BF367AAC2A36E130007B9AB5 /* SeeDoView.swift in Sources */,
 				BF367AA82A36E122007B9AB5 /* EatDrinkView.swift in Sources */,
+				BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */,
 				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
 				BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
+				BF59092B2A38812900A63F11 /* RoundedCorner.swift in Sources */,
+				BF59091F2A38775300A63F11 /* BookingViewModel.swift in Sources */,
 				BF367A762A36DEA7007B9AB5 /* HotelBookingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +404,12 @@
 			files = (
 				BF367AB62A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
 				BF59091C2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
+				BF5909302A3882B400A63F11 /* RoomDetailView.swift in Sources */,
+				BF5909202A38775300A63F11 /* BookingViewModel.swift in Sources */,
+				BF5909242A38792100A63F11 /* BookingRoomView.swift in Sources */,
+				BF5909282A38793200A63F11 /* RoomCard.swift in Sources */,
 				BF367A872A36DEA8007B9AB5 /* HotelBookingTests.swift in Sources */,
+				BF59092C2A38812900A63F11 /* RoundedCorner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,8 +417,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF59092D2A38812900A63F11 /* RoundedCorner.swift in Sources */,
 				BF367AB72A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
+				BF5909252A38792100A63F11 /* BookingRoomView.swift in Sources */,
+				BF5909312A3882B400A63F11 /* RoomDetailView.swift in Sources */,
+				BF5909212A38775300A63F11 /* BookingViewModel.swift in Sources */,
 				BF59091D2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
+				BF5909292A38793200A63F11 /* RoomCard.swift in Sources */,
 				BF367A912A36DEA8007B9AB5 /* HotelBookingUITests.swift in Sources */,
 				BF367A932A36DEA8007B9AB5 /* HotelBookingUITestsLaunchTests.swift in Sources */,
 			);

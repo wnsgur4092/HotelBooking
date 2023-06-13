@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct BookingDateView: View {
+    //MARK: - PROPERTIES
+    @EnvironmentObject var bookingViewModel : BookingViewModel
+    
+    //MARK: - BODY
     var body: some View {
         VStack(spacing: 10){
             checkInButton
@@ -24,7 +28,7 @@ struct BookingDateView: View {
     //CHECK IN BUTTON
     fileprivate var checkInButton : some View {
         Button {
-            print("Check-in button Tapped")
+
         } label: {
             HStack{
                 Text("Check-in".uppercased())
@@ -68,5 +72,6 @@ struct BookingDateView: View {
 struct BookingDateView_Previews: PreviewProvider {
     static var previews: some View {
         BookingDateView()
+            .environmentObject(BookingViewModel())
     }
 }

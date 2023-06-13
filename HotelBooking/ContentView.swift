@@ -14,6 +14,8 @@ struct ContentView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .environmentObject(BookingViewModel())
+            
             AccomodationView()
                 .tabItem {
                     Label("Accomodation", systemImage: "bed.double")
