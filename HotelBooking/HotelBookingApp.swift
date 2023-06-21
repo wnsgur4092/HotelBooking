@@ -11,7 +11,7 @@ import SwiftUI
 struct HotelBookingApp: App {
     var body: some Scene {
         WindowGroup {
-            RoomCard()
+            OnBoardingView()
         }
     }
 }

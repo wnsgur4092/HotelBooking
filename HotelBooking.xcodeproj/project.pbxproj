@@ -51,6 +51,7 @@
 		BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
 		BF5909302A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
 		BF5909312A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
+		BF782DCD2A43016400063345 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF782DCC2A43016400063345 /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		BF5909262A38793200A63F11 /* RoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCard.swift; sourceTree = "<group>"; };
 		BF59092A2A38812900A63F11 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		BF59092E2A3882B400A63F11 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
+		BF782DCC2A43016400063345 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		BF367A9F2A36E024007B9AB5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF782DCC2A43016400063345 /* OnBoardingView.swift */,
 				BF367AA12A36E057007B9AB5 /* HomeView.swift */,
 				BF5909152A38701700A63F11 /* Booking */,
 				BF367AAB2A36E130007B9AB5 /* SeeDoView.swift */,
@@ -388,6 +391,7 @@
 				BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */,
 				BF367A782A36DEA7007B9AB5 /* ContentView.swift in Sources */,
 				BF367AAC2A36E130007B9AB5 /* SeeDoView.swift in Sources */,
+				BF782DCD2A43016400063345 /* OnBoardingView.swift in Sources */,
 				BF367AA82A36E122007B9AB5 /* EatDrinkView.swift in Sources */,
 				BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */,
 				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
