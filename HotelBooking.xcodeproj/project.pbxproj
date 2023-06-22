@@ -53,6 +53,7 @@
 		BF5909312A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
 		BF782DCD2A43016400063345 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF782DCC2A43016400063345 /* OnBoardingView.swift */; };
 		BF8417732A443A0B00EBE11B /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8417722A443A0B00EBE11B /* ThemeCard.swift */; };
+		BF8417762A443DF300EBE11B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8417752A443DF300EBE11B /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		BF59092E2A3882B400A63F11 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		BF782DCC2A43016400063345 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		BF8417722A443A0B00EBE11B /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
+		BF8417752A443DF300EBE11B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				BF367AB22A36E2B5007B9AB5 /* Info.plist */,
 				BF367A752A36DEA7007B9AB5 /* HotelBookingApp.swift */,
 				BF367A772A36DEA7007B9AB5 /* ContentView.swift */,
+				BF8417742A443DE700EBE11B /* Model */,
 				BF367AA02A36E02D007B9AB5 /* ViewModel */,
 				BF367A9F2A36E024007B9AB5 /* View */,
 				BF367AB32A36E5F7007B9AB5 /* Style */,
@@ -252,6 +255,14 @@
 				BF8417722A443A0B00EBE11B /* ThemeCard.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BF8417742A443DE700EBE11B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF8417752A443DF300EBE11B /* Theme.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +417,7 @@
 				BF367AA82A36E122007B9AB5 /* EatDrinkView.swift in Sources */,
 				BF8417732A443A0B00EBE11B /* ThemeCard.swift in Sources */,
 				BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */,
+				BF8417762A443DF300EBE11B /* Theme.swift in Sources */,
 				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
 				BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
 				BF59092B2A38812900A63F11 /* RoundedCorner.swift in Sources */,

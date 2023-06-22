@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ThemeCard: View {
     //MARK: - PROPERTIES
-    var themeName : String = "Perfect Date Night"
-    var themeImage : String = "theme1"
+    var themeName : String
+    var themeImage : String
     
     //MARK: - BODY
     var body: some View {
@@ -43,6 +43,6 @@ struct ThemeCard: View {
 
 struct ThemeCard_Previews: PreviewProvider {
     static var previews: some View {
-        ThemeCard()
+        ThemeCard(themeName: "Theme1", themeImage: "theme1")
     }
 }
