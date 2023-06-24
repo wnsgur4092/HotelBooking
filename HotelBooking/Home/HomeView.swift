@@ -15,22 +15,49 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: true){
+                title
+                    .padding(.bottom, 16)
                 
-                
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack{
-                        
-                        ForEach(themes) { theme in
-                            ThemeCard(themeName: theme.themeName, themeImage: theme.themeImageNmae)
-                        }
-
-                    }
-                    .padding(.bottom, 40)
-                }
+                themeSlider
             }
         }
+        .ignoresSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
     }
+    
     //MARK: - COMPONENTS
+    fileprivate var title : some View {
+        ZStack{
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(maxWidth: .infinity)
+                .background(Color("PrimaryColor"))
+            
+            Text("Are you looking for a perfect date night?\nExellent.")
+                .font(.custom("Poppins-Regular", size: 28))
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+                .padding(.top, 36.25)
+                .padding(.bottom, 28.25)
+        }
+        
+    }
+    
+    fileprivate var themeSlider : some View {
+        ScrollView(.horizontal, showsIndicators: false){
+            HStack(spacing: 20){
+                
+                ForEach(themes) { theme in
+                    ThemeCard(themeName: theme.themeName, themeImage: theme.themeImageNmae)
+                }
+                
+            }
+            .padding(.horizontal, 16)
+            .padding(.bottom, 20)
+        }
+        
+    }
 }
 
 //MARK: - PREVIEW

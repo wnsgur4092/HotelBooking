@@ -22,7 +22,7 @@ struct ThemeCard: View {
             
             Image(themeImage)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(maxWidth: .infinity)
                 .padding(.bottom, 17)
                 
@@ -38,6 +38,11 @@ struct ThemeCard: View {
             
         }
         .frame(maxWidth: .infinity)
+        .padding(.top, 12.5)
+        .padding(.bottom, 19.5)
+        .background(Color.white)
+        .cornerRadius(8.8)
+        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }
 

@@ -51,11 +51,13 @@ struct OnBoardingView: View {
             .font(.custom("Poppins-Regular", size: 24))
             .multilineTextAlignment(.center)
             .lineLimit(5)
+            .foregroundColor(Color("PrimaryColor"))
     }
     
     fileprivate var subDescription : some View {
         Text("Discover our collection of your stay.")
             .font(.custom("Poppins-Regular", size: 16))
+            .foregroundColor(Color("PrimaryColor"))
     }
     
     fileprivate var getStartedButton : some View {
