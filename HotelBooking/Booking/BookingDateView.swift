@@ -15,6 +15,7 @@ struct BookingDateView: View {
     private let calendar: Calendar
     private let monthsLayout: MonthsLayout
     private let visibleDateRange: ClosedRange<Date>
+    private let currentDate = Date()
     
     private let monthDateFormatter: DateFormatter
     
@@ -50,93 +51,110 @@ struct BookingDateView: View {
     
     //MARK: - BODY
     var body: some View {
-        CalendarViewRepresentable(
-            calendar: calendar,
-            visibleDateRange: visibleDateRange,
-            monthsLayout: monthsLayout,
-            dataDependency: selectedDayRange,
-            proxy: calendarViewProxy)
-        
-        .verticalDayMargin(8)
-        .horizontalDayMargin(8)
-        .interMonthSpacing(16)
-        
-        .monthHeaderItemProvider { month in
-            let monthHeaderText = monthDateFormatter.string(from: calendar.date(from: month.components)!)
-            if case .vertical = monthsLayout {
-                return HStack {
-                    Text(monthHeaderText)
-                        .font(.title2)
-                    Spacer()
-                }
-                .padding()
-                .calendarItemModel
-            } else {
-                return Text(monthHeaderText)
-                    .font(.title2)
+        VStack{
+            HStack{
+                Text("Select Checkout date")
+
+                Spacer()
+            }
+            .padding(.bottom, 32)
+            
+            
+            CalendarViewRepresentable(
+                calendar: calendar,
+                visibleDateRange: visibleDateRange,
+                monthsLayout: monthsLayout,
+                dataDependency: selectedDayRange,
+                proxy: calendarViewProxy)
+            
+            .verticalDayMargin(8)
+            .horizontalDayMargin(8)
+            .interMonthSpacing(16)
+            
+            .monthHeaderItemProvider { month in
+                let monthHeaderText = monthDateFormatter.string(from: calendar.date(from: month.components)!)
+                if case .vertical = monthsLayout {
+                    return HStack {
+                        Text(monthHeaderText)
+                            .font(.title2)
+                        Spacer()
+                    }
                     .padding()
                     .calendarItemModel
+                } else {
+                    return Text(monthHeaderText)
+                        .font(.title2)
+                        .padding()
+                        .calendarItemModel
+                }
             }
-        }
-        
-        .dayItemProvider { day in
-            let isSelected: Bool
-            if let selectedDayRange {
-                isSelected = day == selectedDayRange.lowerBound || day == selectedDayRange.upperBound
-            } else {
-                isSelected = false
+            
+            .dayItemProvider { day in
+                let isSelected: Bool
+                if let selectedDayRange {
+                    isSelected = day == selectedDayRange.lowerBound || day == selectedDayRange.upperBound
+                } else {
+                    isSelected = false
+                }
+                return SwiftUIDayView(dayNumber: day.day, isSelected: isSelected)
+                    .calendarItemModel
             }
-            return SwiftUIDayView(dayNumber: day.day, isSelected: isSelected)
-                .calendarItemModel
-        }
-        
-        .dayRangeItemProvider(for: selectedDateRanges) { dayRangeLayoutContext in
-            let framesOfDaysToHighlight = dayRangeLayoutContext.daysAndFrames.map { $0.frame }
-            // UIKit view
-            return DayRangeIndicatorView.calendarItemModel(
-                invariantViewProperties: .init(),
-                content: .init(framesOfDaysToHighlight: framesOfDaysToHighlight))
-        }
-        
-        .onDaySelection { day in
-            DayRangeSelectionHelper.updateDayRange(
-                afterTapSelectionOf: day,
-                existingDayRange: &selectedDayRange)
-        }
-        
-        .onMultipleDaySelectionDrag(
-            began: { day in
+            
+            .dayRangeItemProvider(for: selectedDateRanges) { dayRangeLayoutContext in
+                let framesOfDaysToHighlight = dayRangeLayoutContext.daysAndFrames.map { $0.frame }
+                // UIKit view
+                return DayRangeIndicatorView.calendarItemModel(
+                    invariantViewProperties: .init(),
+                    content: .init(framesOfDaysToHighlight: framesOfDaysToHighlight))
+            }
+            
+            .onDaySelection { day in
                 DayRangeSelectionHelper.updateDayRange(
-                    afterDragSelectionOf: day,
-                    existingDayRange: &selectedDayRange,
-                    initialDayRange: &selectedDayRangeAtStartOfDrag,
-                    state: .began,
-                    calendar: calendar)
-            },
-            changed: { day in
-                DayRangeSelectionHelper.updateDayRange(
-                    afterDragSelectionOf: day,
-                    existingDayRange: &selectedDayRange,
-                    initialDayRange: &selectedDayRangeAtStartOfDrag,
-                    state: .changed,
-                    calendar: calendar)
-            },
-            ended: { day in
-                DayRangeSelectionHelper.updateDayRange(
-                    afterDragSelectionOf: day,
-                    existingDayRange: &selectedDayRange,
-                    initialDayRange: &selectedDayRangeAtStartOfDrag,
-                    state: .ended,
-                    calendar: calendar)
-            })
-        
-        .onAppear {
-            calendarViewProxy.scrollToDay(
-                containing: calendar.date(from: DateComponents(year: 2023, month: 07, day: 19))!,
-                scrollPosition: .centered,
-                animated: false)
+                    afterTapSelectionOf: day,
+                    existingDayRange: &selectedDayRange)
+            }
+            
+            .onMultipleDaySelectionDrag(
+                began: { day in
+                    DayRangeSelectionHelper.updateDayRange(
+                        afterDragSelectionOf: day,
+                        existingDayRange: &selectedDayRange,
+                        initialDayRange: &selectedDayRangeAtStartOfDrag,
+                        state: .began,
+                        calendar: calendar)
+                },
+                changed: { day in
+                    DayRangeSelectionHelper.updateDayRange(
+                        afterDragSelectionOf: day,
+                        existingDayRange: &selectedDayRange,
+                        initialDayRange: &selectedDayRangeAtStartOfDrag,
+                        state: .changed,
+                        calendar: calendar)
+                },
+                ended: { day in
+                    DayRangeSelectionHelper.updateDayRange(
+                        afterDragSelectionOf: day,
+                        existingDayRange: &selectedDayRange,
+                        initialDayRange: &selectedDayRangeAtStartOfDrag,
+                        state: .ended,
+                        calendar: calendar)
+                })
+            
+            .onAppear {
+                calendarViewProxy.scrollToDay(
+                    containing: currentDate,
+                    scrollPosition: .centered,
+                    animated: false)
+            }
+            
+            NavigationLink {
+                BookingRoomView()
+            } label: {
+                Text("NEXT")
+            }
+
         }
-        
+        .padding(.horizontal, 32)
     }
 }
 

@@ -13,18 +13,18 @@ struct HomeView: View {
     
     //MARK: - BODY
     var body: some View {
-
+        NavigationView {
             ScrollView(.vertical, showsIndicators: true){
                 title
                     .padding(.bottom, 16)
-
+                
                 
                 themeSlider
                 
-                Spacer()
             }
             .ignoresSafeArea(.container, edges: .top)
-  
+        }
+        
     }
     
     //MARK: - COMPONENTS

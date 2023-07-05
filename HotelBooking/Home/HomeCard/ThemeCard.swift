@@ -17,6 +17,7 @@ struct ThemeCard: View {
         VStack{
             Text(themeName)
                 .font(.custom("Poppins-Medium", size: 24))
+                .foregroundColor(Color("PrimaryColor"))
                 .padding(.bottom, 24)
                 .padding(.horizontal, 27)
             
@@ -25,16 +26,13 @@ struct ThemeCard: View {
                 .scaledToFill()
                 .frame(maxWidth: .infinity)
                 .padding(.bottom, 17)
-                
             
-            Button {
-                print("Tapped take me here")
-            } label: {
-                Text("Take me here".uppercased())
-            }
-            .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Bold", size: 16)))
-            .padding(.horizontal, 18.5)
-            
+            NavigationLink(destination: BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
+                .environmentObject(BookingViewModel())) {
+                    Text("Take me here".uppercased())
+                }
+                .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Bold", size: 16)))
+                .padding(.horizontal, 18.5)
             
         }
         .frame(maxWidth: .infinity)
