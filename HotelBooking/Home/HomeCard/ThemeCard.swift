@@ -49,5 +49,6 @@ struct ThemeCard: View {
 struct ThemeCard_Previews: PreviewProvider {
     static var previews: some View {
         ThemeCard(themeName: "Theme1", themeImage: "theme1")
+            .fixedSize()
     }
 }

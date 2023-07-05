@@ -54,6 +54,11 @@
 		BF782DCD2A43016400063345 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF782DCC2A43016400063345 /* OnBoardingView.swift */; };
 		BF8417732A443A0B00EBE11B /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8417722A443A0B00EBE11B /* ThemeCard.swift */; };
 		BF8417762A443DF300EBE11B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8417752A443DF300EBE11B /* Theme.swift */; };
+		BF8BD1E42A557CAB001B6C8B /* CollectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1E32A557CAB001B6C8B /* CollectionCard.swift */; };
+		BF8BD1E62A557CD0001B6C8B /* WhatsOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1E52A557CD0001B6C8B /* WhatsOnView.swift */; };
+		BF8BD1EB2A558143001B6C8B /* SwiftUIDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1EA2A558143001B6C8B /* SwiftUIDayView.swift */; };
+		BF8BD1ED2A558160001B6C8B /* DayRangeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1EC2A558160001B6C8B /* DayRangeIndicatorView.swift */; };
+		BF8BD1EF2A55817C001B6C8B /* DayRangeSelectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1EE2A55817C001B6C8B /* DayRangeSelectionHelper.swift */; };
 		BFC36CBD2A471EB600B50B41 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = BFC36CBC2A471EB600B50B41 /* HorizonCalendar */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +111,11 @@
 		BF782DCC2A43016400063345 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		BF8417722A443A0B00EBE11B /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
 		BF8417752A443DF300EBE11B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BF8BD1E32A557CAB001B6C8B /* CollectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCard.swift; sourceTree = "<group>"; };
+		BF8BD1E52A557CD0001B6C8B /* WhatsOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsOnView.swift; sourceTree = "<group>"; };
+		BF8BD1EA2A558143001B6C8B /* SwiftUIDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDayView.swift; sourceTree = "<group>"; };
+		BF8BD1EC2A558160001B6C8B /* DayRangeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRangeIndicatorView.swift; sourceTree = "<group>"; };
+		BF8BD1EE2A55817C001B6C8B /* DayRangeSelectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRangeSelectionHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5909132A38701400A63F11 /* BookingDateView.swift */,
+				BF8BD1F02A558652001B6C8B /* HorizonCalendar */,
 				BF5909222A38792100A63F11 /* BookingRoomView.swift */,
 				BF5909262A38793200A63F11 /* RoomCard.swift */,
 				BF59092E2A3882B400A63F11 /* RoomDetailView.swift */,
@@ -254,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				BF367AA12A36E057007B9AB5 /* HomeView.swift */,
-				BF8417722A443A0B00EBE11B /* ThemeCard.swift */,
+				BF8BD1E22A557C9E001B6C8B /* HomeCard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -265,6 +276,26 @@
 				BF8417752A443DF300EBE11B /* Theme.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BF8BD1E22A557C9E001B6C8B /* HomeCard */ = {
+			isa = PBXGroup;
+			children = (
+				BF8417722A443A0B00EBE11B /* ThemeCard.swift */,
+				BF8BD1E32A557CAB001B6C8B /* CollectionCard.swift */,
+				BF8BD1E52A557CD0001B6C8B /* WhatsOnView.swift */,
+			);
+			path = HomeCard;
+			sourceTree = "<group>";
+		};
+		BF8BD1F02A558652001B6C8B /* HorizonCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BD1EE2A55817C001B6C8B /* DayRangeSelectionHelper.swift */,
+				BF8BD1EC2A558160001B6C8B /* DayRangeIndicatorView.swift */,
+				BF8BD1EA2A558143001B6C8B /* SwiftUIDayView.swift */,
+			);
+			path = HorizonCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,12 +444,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5909232A38792100A63F11 /* BookingRoomView.swift in Sources */,
+				BF8BD1E42A557CAB001B6C8B /* CollectionCard.swift in Sources */,
 				BF367AB52A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
 				BF367AA22A36E057007B9AB5 /* HomeView.swift in Sources */,
 				BF367AA62A36E104007B9AB5 /* AboutUsView.swift in Sources */,
 				BF5909272A38793200A63F11 /* RoomCard.swift in Sources */,
 				BF367AA42A36E0F7007B9AB5 /* AccomodationView.swift in Sources */,
+				BF8BD1E62A557CD0001B6C8B /* WhatsOnView.swift in Sources */,
 				BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */,
+				BF8BD1EF2A55817C001B6C8B /* DayRangeSelectionHelper.swift in Sources */,
 				BF367A782A36DEA7007B9AB5 /* ContentView.swift in Sources */,
 				BF367AAC2A36E130007B9AB5 /* SeeDoView.swift in Sources */,
 				BF782DCD2A43016400063345 /* OnBoardingView.swift in Sources */,
@@ -427,10 +461,12 @@
 				BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */,
 				BF8417762A443DF300EBE11B /* Theme.swift in Sources */,
 				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
+				BF8BD1EB2A558143001B6C8B /* SwiftUIDayView.swift in Sources */,
 				BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
 				BF59092B2A38812900A63F11 /* RoundedCorner.swift in Sources */,
 				BF59091F2A38775300A63F11 /* BookingViewModel.swift in Sources */,
 				BF367A762A36DEA7007B9AB5 /* HotelBookingApp.swift in Sources */,
+				BF8BD1ED2A558160001B6C8B /* DayRangeIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

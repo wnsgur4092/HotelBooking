@@ -13,16 +13,18 @@ struct HomeView: View {
     
     //MARK: - BODY
     var body: some View {
-        NavigationView {
+
             ScrollView(.vertical, showsIndicators: true){
                 title
                     .padding(.bottom, 16)
+
                 
                 themeSlider
+                
+                Spacer()
             }
-        }
-        .ignoresSafeArea(.all)
-        .navigationBarBackButtonHidden(true)
+            .ignoresSafeArea(.container, edges: .top)
+  
     }
     
     //MARK: - COMPONENTS
@@ -31,14 +33,16 @@ struct HomeView: View {
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(maxWidth: .infinity)
+                .ignoresSafeArea()
                 .background(Color("PrimaryColor"))
+                .ignoresSafeArea()
             
             Text("Are you looking for a perfect date night?\nExellent.")
                 .font(.custom("Poppins-Regular", size: 28))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
-                .padding(.top, 36.25)
+                .padding(.top, 90.25)
                 .padding(.bottom, 28.25)
         }
         

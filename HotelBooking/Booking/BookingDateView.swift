@@ -6,72 +6,144 @@
 //
 
 import SwiftUI
+import HorizonCalendar
 
 struct BookingDateView: View {
     //MARK: - PROPERTIES
     @EnvironmentObject var bookingViewModel : BookingViewModel
     
+    private let calendar: Calendar
+    private let monthsLayout: MonthsLayout
+    private let visibleDateRange: ClosedRange<Date>
+    
+    private let monthDateFormatter: DateFormatter
+    
+    @StateObject private var calendarViewProxy = CalendarViewProxy()
+    
+    @State private var selectedDayRange: DayRange?
+    @State private var selectedDayRangeAtStartOfDrag: DayRange?
+    
+    private var selectedDateRanges: Set<ClosedRange<Date>> {
+        guard let selectedDayRange else { return [] }
+        let selectedStartDate = calendar.date(from: selectedDayRange.lowerBound.components)!
+        let selectedEndDate = calendar.date(from: selectedDayRange.upperBound.components)!
+        return [selectedStartDate...selectedEndDate]
+    }
+    
+    //MARK: - INIT
+    init(calendar: Calendar, monthsLayout: MonthsLayout) {
+        self.calendar = calendar
+        self.monthsLayout = monthsLayout
+        
+        let startDate = calendar.date(from: DateComponents(year: 2023, month: 01, day: 01))!
+        let endDate = calendar.date(from: DateComponents(year: 2026, month: 12, day: 31))!
+        visibleDateRange = startDate...endDate
+        
+        monthDateFormatter = DateFormatter()
+        monthDateFormatter.calendar = calendar
+        monthDateFormatter.locale = calendar.locale
+        monthDateFormatter.dateFormat = DateFormatter.dateFormat(
+            fromTemplate: "MMMM yyyy",
+            options: 0,
+            locale: calendar.locale ?? Locale.current)
+    }
+    
     //MARK: - BODY
     var body: some View {
-        VStack(spacing: 10){
-            checkInButton
-            
-            checkOutButton
-                .padding(.bottom, 25)
-            
-            confirmButton
-        }
-        .padding(.horizontal, 24)
-    }
-    
-    //MARK: - COMPONENTS
-    //CHECK IN BUTTON
-    fileprivate var checkInButton : some View {
-        Button {
-
-        } label: {
-            HStack{
-                Text("Check-in".uppercased())
-                
-                Spacer()
+        CalendarViewRepresentable(
+            calendar: calendar,
+            visibleDateRange: visibleDateRange,
+            monthsLayout: monthsLayout,
+            dataDependency: selectedDayRange,
+            proxy: calendarViewProxy)
+        
+        .verticalDayMargin(8)
+        .horizontalDayMargin(8)
+        .interMonthSpacing(16)
+        
+        .monthHeaderItemProvider { month in
+            let monthHeaderText = monthDateFormatter.string(from: calendar.date(from: month.components)!)
+            if case .vertical = monthsLayout {
+                return HStack {
+                    Text(monthHeaderText)
+                        .font(.title2)
+                    Spacer()
+                }
+                .padding()
+                .calendarItemModel
+            } else {
+                return Text(monthHeaderText)
+                    .font(.title2)
+                    .padding()
+                    .calendarItemModel
             }
-            .padding(.horizontal, 16)
         }
-        .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Medium", size: 16)))
-    }
-    
-    
-    //CHECK OUT BUTTON
-    fileprivate var checkOutButton : some View {
-        Button {
-            print("Check-out button Tapped")
-        } label: {
-            HStack{
-                Text("Check-out".uppercased())
-                
-                Spacer()
+        
+        .dayItemProvider { day in
+            let isSelected: Bool
+            if let selectedDayRange {
+                isSelected = day == selectedDayRange.lowerBound || day == selectedDayRange.upperBound
+            } else {
+                isSelected = false
             }
-            .padding(.horizontal, 16)
+            return SwiftUIDayView(dayNumber: day.day, isSelected: isSelected)
+                .calendarItemModel
         }
-        .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Medium", size: 16)))
-    }
-    
-    //Confirm Button
-    fileprivate var confirmButton : some View {
-        Button {
-            print("Tapped Update Guests & Room ")
-        } label: {
-            Text("Update Guests & Rooms")
+        
+        .dayRangeItemProvider(for: selectedDateRanges) { dayRangeLayoutContext in
+            let framesOfDaysToHighlight = dayRangeLayoutContext.daysAndFrames.map { $0.frame }
+            // UIKit view
+            return DayRangeIndicatorView.calendarItemModel(
+                invariantViewProperties: .init(),
+                content: .init(framesOfDaysToHighlight: framesOfDaysToHighlight))
         }
-        .buttonStyle(AccentButtonStyle(font: .custom("Poppins-Bold", size: 16)))
-        .padding(.horizontal, 15)
+        
+        .onDaySelection { day in
+            DayRangeSelectionHelper.updateDayRange(
+                afterTapSelectionOf: day,
+                existingDayRange: &selectedDayRange)
+        }
+        
+        .onMultipleDaySelectionDrag(
+            began: { day in
+                DayRangeSelectionHelper.updateDayRange(
+                    afterDragSelectionOf: day,
+                    existingDayRange: &selectedDayRange,
+                    initialDayRange: &selectedDayRangeAtStartOfDrag,
+                    state: .began,
+                    calendar: calendar)
+            },
+            changed: { day in
+                DayRangeSelectionHelper.updateDayRange(
+                    afterDragSelectionOf: day,
+                    existingDayRange: &selectedDayRange,
+                    initialDayRange: &selectedDayRangeAtStartOfDrag,
+                    state: .changed,
+                    calendar: calendar)
+            },
+            ended: { day in
+                DayRangeSelectionHelper.updateDayRange(
+                    afterDragSelectionOf: day,
+                    existingDayRange: &selectedDayRange,
+                    initialDayRange: &selectedDayRangeAtStartOfDrag,
+                    state: .ended,
+                    calendar: calendar)
+            })
+        
+        .onAppear {
+            calendarViewProxy.scrollToDay(
+                containing: calendar.date(from: DateComponents(year: 2023, month: 07, day: 19))!,
+                scrollPosition: .centered,
+                animated: false)
+        }
+        
     }
 }
 
 //MARK: - PREVIEW
 struct BookingDateView_Previews: PreviewProvider {
     static var previews: some View {
-        BookingDateView()
+        BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
             .environmentObject(BookingViewModel())
     }
 }

@@ -9,31 +9,34 @@ import SwiftUI
 
 struct OnBoardingView: View {
     //MARK: - PROPERTIES
+    @State private var isHomeViewPresented = false
+
     var body: some View {
-        NavigationView {
-            ZStack {
-                Image("OnBoarding")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            Image("OnBoarding")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
                 
-                VStack(alignment: .center) {
-                    logo
-                        .padding(.vertical, 50)
-                        .padding(.horizontal, 155)
+            VStack(alignment: .center) {
+                logo
+                    .padding(.vertical, 50)
+                    .padding(.horizontal, 155)
                     
-                    mainDescription
-                        .padding(.bottom, 20)
-                        .padding(.horizontal, 32)
+                mainDescription
+                    .padding(.bottom, 20)
+                    .padding(.horizontal, 32)
                     
-                    subDescription
-                        .padding(.bottom, 30)
+                subDescription
+                    .padding(.bottom, 30)
                     
-                    getStartedButton
-                        .padding(.horizontal, 24)
-                        .padding(.bottom, 30)
-                }
+                getStartedButton
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 30)
             }
+        }
+        .fullScreenCover(isPresented: $isHomeViewPresented) {
+            HomeView()
         }
     }
     
@@ -43,7 +46,6 @@ struct OnBoardingView: View {
             .resizable()
             .scaledToFit()
             .frame(maxWidth: .infinity)
-
     }
     
     fileprivate var mainDescription : some View {
@@ -61,12 +63,12 @@ struct OnBoardingView: View {
     }
     
     fileprivate var getStartedButton : some View {
-        NavigationLink {
-            HomeView()
-        } label: {
+        Button(action: {
+            isHomeViewPresented = true
+        }) {
             Text("GET STARTED")
         }
-        .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Reuglar", size: 16)))
+        .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Regular", size: 16)))
     }
 }
 
@@ -77,3 +79,4 @@ struct OnBoardingView_Previews: PreviewProvider {
         OnBoardingView()
     }
 }
+
