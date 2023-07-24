@@ -9,7 +9,21 @@ import SwiftUI
 
 struct RoomDetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            Text("Celestial Classic")
+            
+            Text("You get the bed all to yourself in our twin room. Same size as our double room, the twin room offers two comfortable single beds and plenty of space to relax.")
+            
+            Text("Decorated with a colourful yet subtle décor, the twin room is perfectly fit for two people who travel together but prefer not to share the covers.")
+            
+            Text("Room Details")
+            
+            HStack{
+                Text("People")
+                
+                Text("15m/2 / 161 ft2")
+            }
+        }
     }
 }
 
