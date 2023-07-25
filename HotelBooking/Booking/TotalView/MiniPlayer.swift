@@ -33,120 +33,99 @@ struct Miniplayer: View {
                 .fill(Color.gray)
                 .frame(width: expand ? 60 : 0, height: expand ? 4 : 0)
                 .opacity(expand ? 1 : 0)
-                .padding(.top,expand ? safeArea?.top : 0)
-                .padding(.vertical,expand ? 30 : 0)
+//                .padding(.top,expand ? safeArea?.top : 0)
+                .padding(.vertical,expand ? 20 : 0)
             
             HStack(spacing: 15){
                 
                 // centering IMage...
-                
-                if expand{Spacer(minLength: 0)}
-                
-                Image("room")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: expand ? height : 55, height: expand ? height : 55)
-                    .cornerRadius(15)
-                
                 if !expand{
                     
-                    Text("Lady Gaga")
+                    Text("1260.00 AUD")
                         .font(.title2)
                         .fontWeight(.bold)
-                        .matchedGeometryEffect(id: "Label", in: animation)
+//                        .matchedGeometryEffect(id: "Label", in: animation)
                 }
                 
-                Spacer(minLength: 0)
+                Spacer()
                 
                 if !expand{
                     
                     Button(action: {}, label: {
                         
-                        Image(systemName: "play.fill")
-                            .font(.title2)
-                            .foregroundColor(.primary)
-                    })
-                    
-                    Button(action: {}, label: {
-                        
-                        Image(systemName: "forward.fill")
-                            .font(.title2)
-                            .foregroundColor(.primary)
+                        Text("NEXT")
                     })
                 }
+                
+                
             }
             .padding(.horizontal)
             
-            VStack(spacing: 15){
-
-                Spacer(minLength: 0)
-                
+            VStack(alignment: .center, spacing: 12){
                 HStack{
-                    
                     if expand{
+                        Text("Subtotal")
                         
-                        Text("Lady Gaga")
+                        Spacer()
+                        
+                        Text("1560.00 AUD")
                             .font(.title2)
-                            .foregroundColor(.primary)
+                            .foregroundColor(.white)
                             .fontWeight(.bold)
                             .matchedGeometryEffect(id: "Label", in: animation)
                     }
-                    
-                    Spacer(minLength: 0)
-                    
-                    Button(action: {}) {
-                        
-                        Image(systemName: "ellipsis.circle")
-                            .font(.title2)
-                            .foregroundColor(.primary)
+                }
+                
+                Rectangle()
+                  .frame(maxWidth: .infinity, maxHeight: 1)
+
+                HStack{
+                    Text("Current Rate Selection")
+                    Spacer()
+                }
+                
+                VStack{
+                    HStack{
+                        Text("Room Only")
+                        Spacer()
+                    }
+                    HStack{
+                        Text("1537.50 USD x 2 Nights")
+                        Spacer()
                     }
                 }
-                .padding()
-                .padding(.top,20)
                 
-                // Live String...
+                
+                Rectangle()
+                  .frame(maxWidth: .infinity, maxHeight: 1)
                 
                 HStack{
-                    
-                    Capsule()
-                        .fill(
-                        
-                            LinearGradient(gradient: .init(colors: [Color.primary.opacity(0.7),Color.primary.opacity(0.1)]), startPoint: .leading, endPoint: .trailing)
-                        )
-                        .frame(height: 4)
-                    
-                    Text("LIVE")
-                        .fontWeight(.bold)
-                        .foregroundColor(.primary)
-                    
-                    Capsule()
-                        .fill(
-                        
-                            LinearGradient(gradient: .init(colors: [Color.primary.opacity(0.1),Color.primary.opacity(0.7)]), startPoint: .leading, endPoint: .trailing)
-                        )
-                        .frame(height: 4)
+                    Text("Enhancements")
+                    Spacer()
                 }
-                .padding()
                 
-                // Stop Button...
-                
-                Button(action: {}) {
-                    
-                    Image(systemName: "stop.fill")
-                        .font(.largeTitle)
-                        .foregroundColor(.primary)
+                VStack{
+                    HStack{
+                        Text("Special Surprise")
+                        Spacer()
+                    }
+  
+                    HStack{
+                        Text("1 Night")
+                        Spacer()
+                        Text("300.00 DKK")
+                    }
                 }
-                .padding()
-                
-                Spacer(minLength: 0)
- 
                 
                 Spacer()
+                
             }
             // this will give strech effect...
             .frame(height: expand ? nil : 0)
             .opacity(expand ? 1 : 0)
         }
+        .padding(.horizontal, 30)
+        .foregroundColor(.white)
         // expanding to full screen when clicked...
         .frame(maxHeight: expand ? .infinity : 80)
         // moving the miniplayer above the tabbar...
@@ -165,12 +144,14 @@ struct Miniplayer: View {
                 
                 withAnimation(.spring()){expand = true}
             })
+            .background(Color.black)
         )
-        .cornerRadius(expand ? 20 : 0)
-        .offset(y: expand ? 0 : -48)
+        .clipShape(RoundedCorners(tl: 16, tr: 16, bl: 0, br: 0))
+//        .cornerRadius(expand ? 20 : 0)
+//        .offset(y: expand ? 0 : -48)
         .offset(y: offset)
         .gesture(DragGesture().onEnded(onended(value:)).onChanged(onchanged(value:)))
-        .ignoresSafeArea()
+//        .ignoresSafeArea()
     }
     
     func onchanged(value: DragGesture.Value){

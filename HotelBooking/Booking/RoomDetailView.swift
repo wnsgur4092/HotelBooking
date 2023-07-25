@@ -13,28 +13,22 @@ struct RoomDetailView: View {
     
     @State private var isTotalViewExpanded: Bool = false
     
+    @State var expand = false
+    
     @Namespace var animation
     @GestureState var gestureOffset: CGFloat = 0
     
     var body: some View {
-//        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
             
-        VStack{
-            ScrollView {
-                Text("Celestial Classic")
-                
-                Text("You get the bed all to yourself in our twin room. Same size as our double room, the twin room offers two comfortable single beds and plenty of space to relax.")
-                
-                Text("Decorated with a colourful yet subtle décor, the twin room is perfectly fit for two people who travel together but prefer not to share the covers.")
-                
-                roomDetails
-                
-                roomAmenities
-                
-                optionSelects
+            TabView {
+                Text("Hello World")
             }
             
-            TotalView()
+            Miniplayer(animation: animation, expand: $expand)
+            
+                .navigationBarHidden(true)
+            
         }
     }
     

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     //MARK: - PROPERTIES
+    @StateObject var homeViewModel : HomeViewModel
     var themes: [Theme] = themeLists
     @State var showBookingDateView = false
     
@@ -16,44 +17,22 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: true){
-                title
-                    .padding(.bottom, 16)
-                
-                
+                Header(title: "Let’s pick you up the best rooms", subtitle: "Couple and a place to be inspired. We offer a bespoke.")
+                    .padding(.bottom, 20)
                 themeSlider
                 
+                    .navigationBarHidden(true)
             }
             .ignoresSafeArea(.container, edges: .top)
         }
-        
     }
     
     //MARK: - COMPONENTS
-    fileprivate var title : some View {
-        ZStack{
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(maxWidth: .infinity)
-                .ignoresSafeArea()
-                .background(Color("PrimaryColor"))
-                .ignoresSafeArea()
-            
-            Text("Are you looking for a perfect date night?\nExellent.")
-                .font(.custom("Poppins-Regular", size: 28))
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 32)
-                .padding(.top, 90.25)
-                .padding(.bottom, 28.25)
-        }
-        
-    }
-    
     fileprivate var themeSlider : some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 20){
                 ForEach(themes) { theme in
-                    ThemeCard(themeName: theme.themeName, themeImage: theme.themeImageNmae, showBookingDateView: $showBookingDateView)
+                    ThemeCard(themeName: theme.themeName, themeImage: theme.themeImageNmae)
                 }
             }
             .padding(.horizontal, 16)
@@ -66,6 +45,6 @@ struct HomeView: View {
 //MARK: - PREVIEW
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(homeViewModel: HomeViewModel())
     }
 }

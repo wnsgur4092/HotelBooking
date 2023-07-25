@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ThemeCard: View {
+    //MARK: - PROPERTIES
     var themeName : String
     var themeImage : String
-    @Binding var showBookingDateView: Bool
-
+    
+    //MARK: - BODY
     var body: some View {
         VStack{
             Text(themeName)
@@ -26,13 +27,19 @@ struct ThemeCard: View {
                 .frame(maxWidth: .infinity)
                 .padding(.bottom, 17)
             
-            Button(action: {
-                showBookingDateView = true
-            }) {
-                Text("Take me here".uppercased())
+//            NavigationLink(destination: BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
+//                .environmentObject(BookingViewModel())) {
+//                    Text("Take me here".uppercased())
+//                }
+//                .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Bold", size: 16)))
+//                .padding(.horizontal, 18.5)
+            NavigationLink {
+                DateInputView()
+            } label: {
+                Text("NEXT")
             }
-            .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Bold", size: 16)))
-            .padding(.horizontal, 18.5)
+
+            
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 12.5)
@@ -45,7 +52,7 @@ struct ThemeCard: View {
 
 struct ThemeCard_Previews: PreviewProvider {
     static var previews: some View {
-        ThemeCard(themeName: "Theme1", themeImage: "theme1", showBookingDateView: .constant(false))
+        ThemeCard(themeName: "Theme1", themeImage: "theme1")
             .fixedSize()
     }
 }

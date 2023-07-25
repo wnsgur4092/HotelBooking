@@ -8,30 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     
     var body: some View {
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-                    .environmentObject(BookingViewModel())
-                
-                AccomodationView()
-                    .tabItem {
-                        Label("Accomodation", systemImage: "bed.double")
-                    }
-
-                EatDrinkView()
-                    .tabItem {
-                        Label("Eat & Drink", systemImage: "fork.knife")
-                    }
-            }
+        TabView {
+            HomeView(homeViewModel: HomeViewModel())
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+                .environmentObject(BookingViewModel())
             
+            AccomodationView()
+                .tabItem {
+                    Label("Accomodation", systemImage: "bed.double")
+                }
             
-           
+            EatDrinkView()
+                .tabItem {
+                    Label("Eat & Drink", systemImage: "fork.knife")
+                }
         }
     }
 }

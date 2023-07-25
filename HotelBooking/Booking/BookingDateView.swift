@@ -10,6 +10,7 @@ import HorizonCalendar
 
 struct BookingDateView: View {
     //MARK: - PROPERTIES
+    
     @EnvironmentObject var bookingViewModel : BookingViewModel
     
     private let calendar: Calendar
@@ -53,6 +54,11 @@ struct BookingDateView: View {
     var body: some View {
         VStack{
             HStack{
+                Image(systemName: "chevron.left")
+                Spacer()
+            }
+            
+            HStack{
                 Text("Select Checkout date")
 
                 Spacer()
@@ -66,7 +72,6 @@ struct BookingDateView: View {
                 monthsLayout: monthsLayout,
                 dataDependency: selectedDayRange,
                 proxy: calendarViewProxy)
-            
             .verticalDayMargin(8)
             .horizontalDayMargin(8)
             .interMonthSpacing(16)
@@ -155,6 +160,7 @@ struct BookingDateView: View {
 
         }
         .padding(.horizontal, 32)
+        .navigationBarHidden(true)
     }
 }
 

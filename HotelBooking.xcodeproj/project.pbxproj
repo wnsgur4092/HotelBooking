@@ -64,6 +64,12 @@
 		BF8EBE892A6EE92500426FCD /* MiniTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE882A6EE92500426FCD /* MiniTotalView.swift */; };
 		BF8EBE8C2A6F9BFD00426FCD /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE8B2A6F9BFD00426FCD /* MiniPlayer.swift */; };
 		BF8EBE902A6FAB9B00426FCD /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE8F2A6FAB9B00426FCD /* VideoPlayerViewModel.swift */; };
+		BF8EBE952A6FCAE100426FCD /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE942A6FCAE100426FCD /* Header.swift */; };
+		BF8EBE972A6FCB6B00426FCD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE962A6FCB6B00426FCD /* Fonts.swift */; };
+		BF8EBE9B2A6FCD6800426FCD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE9A2A6FCD6800426FCD /* Colors.swift */; };
+		BF8EBE9D2A6FD1C700426FCD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE9C2A6FD1C700426FCD /* HomeViewModel.swift */; };
+		BF8EBE9F2A6FD28E00426FCD /* BookingDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE9E2A6FD28E00426FCD /* BookingDateViewModel.swift */; };
+		BF8EBEA32A6FF52600426FCD /* DateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBEA22A6FF52600426FCD /* DateInputView.swift */; };
 		BFC36CBD2A471EB600B50B41 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = BFC36CBC2A471EB600B50B41 /* HorizonCalendar */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +132,12 @@
 		BF8EBE882A6EE92500426FCD /* MiniTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTotalView.swift; sourceTree = "<group>"; };
 		BF8EBE8B2A6F9BFD00426FCD /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
 		BF8EBE8F2A6FAB9B00426FCD /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		BF8EBE942A6FCAE100426FCD /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		BF8EBE962A6FCB6B00426FCD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		BF8EBE9A2A6FCD6800426FCD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BF8EBE9C2A6FD1C700426FCD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BF8EBE9E2A6FD28E00426FCD /* BookingDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDateViewModel.swift; sourceTree = "<group>"; };
+		BF8EBEA22A6FF52600426FCD /* DateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +249,8 @@
 			children = (
 				BF59091E2A38775300A63F11 /* BookingViewModel.swift */,
 				BF8EBE8F2A6FAB9B00426FCD /* VideoPlayerViewModel.swift */,
+				BF8EBE9C2A6FD1C700426FCD /* HomeViewModel.swift */,
+				BF8EBE9E2A6FD28E00426FCD /* BookingDateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -257,6 +271,8 @@
 				BF367AB42A36E675007B9AB5 /* PrimaryButtonStyle.swift */,
 				BF59091A2A38726000A63F11 /* AccentButtonStyle.swift */,
 				BF59092A2A38812900A63F11 /* RoundedCorner.swift */,
+				BF8EBE962A6FCB6B00426FCD /* Fonts.swift */,
+				BF8EBE9A2A6FCD6800426FCD /* Colors.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -264,6 +280,7 @@
 		BF5909152A38701700A63F11 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				BF8EBEA22A6FF52600426FCD /* DateInputView.swift */,
 				BF5909132A38701400A63F11 /* BookingDateView.swift */,
 				BF8BD1F02A558652001B6C8B /* HorizonCalendar */,
 				BF5909222A38792100A63F11 /* BookingRoomView.swift */,
@@ -325,6 +342,7 @@
 		BF8EBE932A6FCAC900426FCD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BF8EBE942A6FCAE100426FCD /* Header.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -475,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5909232A38792100A63F11 /* BookingRoomView.swift in Sources */,
+				BF8EBE9D2A6FD1C700426FCD /* HomeViewModel.swift in Sources */,
 				BF8BD1E42A557CAB001B6C8B /* CollectionCard.swift in Sources */,
 				BF367AB52A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
 				BF367AA22A36E057007B9AB5 /* HomeView.swift in Sources */,
@@ -484,6 +503,7 @@
 				BF8EBE892A6EE92500426FCD /* MiniTotalView.swift in Sources */,
 				BF8BD1E62A557CD0001B6C8B /* WhatsOnView.swift in Sources */,
 				BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */,
+				BF8EBE952A6FCAE100426FCD /* Header.swift in Sources */,
 				BF8EBE622A6ECF6300426FCD /* BlurView.swift in Sources */,
 				BF8BD1EF2A55817C001B6C8B /* DayRangeSelectionHelper.swift in Sources */,
 				BF367A782A36DEA7007B9AB5 /* ContentView.swift in Sources */,
@@ -494,9 +514,13 @@
 				BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */,
 				BF8417762A443DF300EBE11B /* Theme.swift in Sources */,
 				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
+				BF8EBE9F2A6FD28E00426FCD /* BookingDateViewModel.swift in Sources */,
 				BF8EBE602A6EC81200426FCD /* TotalView.swift in Sources */,
 				BF8BD1EB2A558143001B6C8B /* SwiftUIDayView.swift in Sources */,
 				BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
+				BF8EBE972A6FCB6B00426FCD /* Fonts.swift in Sources */,
+				BF8EBEA32A6FF52600426FCD /* DateInputView.swift in Sources */,
+				BF8EBE9B2A6FCD6800426FCD /* Colors.swift in Sources */,
 				BF59092B2A38812900A63F11 /* RoundedCorner.swift in Sources */,
 				BF59091F2A38775300A63F11 /* BookingViewModel.swift in Sources */,
 				BF8EBE902A6FAB9B00426FCD /* VideoPlayerViewModel.swift in Sources */,

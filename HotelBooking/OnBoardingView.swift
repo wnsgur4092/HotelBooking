@@ -35,9 +35,9 @@ struct OnBoardingView: View {
                     .padding(.bottom, 30)
             }
         }
-        .fullScreenCover(isPresented: $isHomeViewPresented) {
-            HomeView()
-        }
+//        .fullScreenCover(isPresented: $isHomeViewPresented) {
+//            HomeView()
+//        }
     }
     
     //MARK: - COMPONENTS

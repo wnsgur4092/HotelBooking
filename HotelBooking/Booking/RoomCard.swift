@@ -53,18 +53,18 @@ struct RoomCard: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .overlay(RoundedCorner(radius: 16, corners: [.topLeft, .topRight]).stroke(lineWidth: 1))
+//        .overlay(RoundedCorner(radius: 16, corners: [.topLeft, .topRight]).stroke(lineWidth: 1))
         .padding(24)
     }
     
 }
 
 //MARK: - EXTENSION
-extension View {
-    func roundedCorner(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape(RoundedCorner(radius: radius, corners: corners) )
-    }
-}
+//extension View {
+//    func roundedCorner(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+//        clipShape(RoundedCorner(radius: radius, corners: corners) )
+//    }
+//}
 
 //MARK: - PREVIEW
 struct RoomCard_Previews: PreviewProvider {
