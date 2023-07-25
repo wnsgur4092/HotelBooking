@@ -29,12 +29,18 @@ struct Miniplayer: View {
         
         VStack{
             
-            Capsule()
-                .fill(Color.gray)
-                .frame(width: expand ? 60 : 0, height: expand ? 4 : 0)
-                .opacity(expand ? 1 : 0)
-//                .padding(.top,expand ? safeArea?.top : 0)
-                .padding(.vertical,expand ? 20 : 0)
+            Image(systemName: "chevron.down")
+                .resizable()
+                .frame(width: 40, height: 8)
+                .rotationEffect(.degrees(expand ? 0 : 180))
+                .padding(.vertical, expand ? 20 : 0)
+
+            
+//            Capsule()
+//                .fill(Color.gray)
+//                .frame(width: expand ? 60 : 0, height: expand ? 4 : 0)
+//                .opacity(expand ? 1 : 0)
+//                .padding(.vertical,expand ? 20 : 0)
             
             HStack(spacing: 15){
                 

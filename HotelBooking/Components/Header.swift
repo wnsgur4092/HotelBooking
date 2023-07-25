@@ -16,7 +16,7 @@ struct Header: View {
     var body: some View {
         VStack(alignment: .center, spacing: 20){
             Text(title)
-                .font(regularFont(size: 32))
+                .font(regularFont(size: 28))
             
             Text(subtitle)
                 .font(regularFont(size: 16))

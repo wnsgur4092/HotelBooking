@@ -10,7 +10,7 @@ import SwiftUI
 struct BookingRoomView: View {
     var body: some View {
         VStack{
-            Header(title: "Click below sadsadas", subtitle: "Click to see more in details")
+            Header(title: "Click below\nsadsadas", subtitle: "Click to see more in details")
             
             ScrollView(.vertical, showsIndicators: true) {
                 RoomCard()
