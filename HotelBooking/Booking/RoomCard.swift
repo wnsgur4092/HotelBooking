@@ -40,12 +40,16 @@ struct RoomCard: View {
                     .frame(maxWidth: .infinity)
                     .border(Color.black, width: 1)
                 
+                NavigationLink {
+                    RoomDetailView()
+                } label: {
+                    Text("Book Now".uppercased())
+                        .font(.custom("Poppins-Medium", size: 20))
+                        .padding(16)
+                        .frame(maxWidth: .infinity)
+                        .border(Color.black, width: 1)
+                }
                 
-                Text("Book Now".uppercased())
-                    .font(.custom("Poppins-Medium", size: 20))
-                    .padding(16)
-                    .frame(maxWidth: .infinity)
-                    .border(Color.black, width: 1)
             }
             .frame(maxWidth: .infinity)
         }

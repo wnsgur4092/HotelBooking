@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     //MARK: - PROPERTIES
     var themes: [Theme] = themeLists
+    @State var showBookingDateView = false
     
     //MARK: - BODY
     var body: some View {
@@ -51,18 +52,16 @@ struct HomeView: View {
     fileprivate var themeSlider : some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 20){
-                
                 ForEach(themes) { theme in
-                    ThemeCard(themeName: theme.themeName, themeImage: theme.themeImageNmae)
+                    ThemeCard(themeName: theme.themeName, themeImage: theme.themeImageNmae, showBookingDateView: $showBookingDateView)
                 }
-                
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 20)
         }
-        
     }
 }
+
 
 //MARK: - PREVIEW
 struct HomeView_Previews: PreviewProvider {
