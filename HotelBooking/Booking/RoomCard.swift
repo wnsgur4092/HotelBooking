@@ -39,11 +39,19 @@ struct RoomCard: View {
                     .padding(16)
                     .frame(maxWidth: .infinity)
                     .border(Color.black, width: 1)
+                    .background(
+                        Image("OnBoarding")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    )
+                    .clipped()
+   
                 
                 NavigationLink {
                     RoomDetailView()
                 } label: {
                     Text("Book Now".uppercased())
+                        .foregroundColor(Color("AccentColor"))
                         .font(.custom("Poppins-Medium", size: 20))
                         .padding(16)
                         .frame(maxWidth: .infinity)

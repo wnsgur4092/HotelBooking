@@ -27,18 +27,21 @@ struct ThemeCard: View {
                 .frame(maxWidth: .infinity)
                 .padding(.bottom, 17)
             
-//            NavigationLink(destination: BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
-//                .environmentObject(BookingViewModel())) {
-//                    Text("Take me here".uppercased())
-//                }
-//                .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Bold", size: 16)))
-//                .padding(.horizontal, 18.5)
+            //            NavigationLink(destination: BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
+            //                .environmentObject(BookingViewModel())) {
+            //                    Text("Take me here".uppercased())
+            //                }
+            //                .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Bold", size: 16)))
+            //                .padding(.horizontal, 18.5)
             NavigationLink {
                 DateInputView()
             } label: {
-                Text("NEXT")
+                Text("Take me here".uppercased())
+                    
             }
-
+            .buttonStyle(PrimaryButtonStyle(font: boldFont(size: 16)))
+            .padding(.horizontal, 18.5)
+            
             
         }
         .frame(maxWidth: .infinity)

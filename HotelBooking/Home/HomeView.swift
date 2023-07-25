@@ -19,6 +19,7 @@ struct HomeView: View {
             ScrollView(.vertical, showsIndicators: true){
                 Header(title: "Let’s pick you up the best rooms", subtitle: "Couple and a place to be inspired. We offer a bespoke.")
                     .padding(.bottom, 20)
+                
                 themeSlider
                 
                     .navigationBarHidden(true)

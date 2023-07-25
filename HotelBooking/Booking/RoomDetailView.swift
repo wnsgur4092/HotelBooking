@@ -20,10 +20,6 @@ struct RoomDetailView: View {
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
-            
-            
-
-                
                 VStack{
                     Header(title: "Add enhancements\nas you desire", subtitle: "Click to see more in details")
                     

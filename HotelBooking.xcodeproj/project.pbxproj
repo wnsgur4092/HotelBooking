@@ -235,11 +235,7 @@
 				BF782DCC2A43016400063345 /* OnBoardingView.swift */,
 				BF8417712A443A0300EBE11B /* Home */,
 				BF5909152A38701700A63F11 /* Booking */,
-				BF367AAB2A36E130007B9AB5 /* SeeDoView.swift */,
-				BF367AA92A36E12A007B9AB5 /* OurStoryView.swift */,
-				BF367AA72A36E122007B9AB5 /* EatDrinkView.swift */,
-				BF367AA52A36E104007B9AB5 /* AboutUsView.swift */,
-				BF367AA32A36E0F7007B9AB5 /* AccomodationView.swift */,
+				BF8EBEA42A7010B800426FCD /* LowPriority */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -345,6 +341,18 @@
 				BF8EBE942A6FCAE100426FCD /* Header.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		BF8EBEA42A7010B800426FCD /* LowPriority */ = {
+			isa = PBXGroup;
+			children = (
+				BF367AAB2A36E130007B9AB5 /* SeeDoView.swift */,
+				BF367AA92A36E12A007B9AB5 /* OurStoryView.swift */,
+				BF367AA72A36E122007B9AB5 /* EatDrinkView.swift */,
+				BF367AA52A36E104007B9AB5 /* AboutUsView.swift */,
+				BF367AA32A36E0F7007B9AB5 /* AccomodationView.swift */,
+			);
+			path = LowPriority;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
