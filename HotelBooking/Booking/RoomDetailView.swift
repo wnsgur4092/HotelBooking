@@ -20,42 +20,41 @@ struct RoomDetailView: View {
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
-                VStack{
-                    Header(title: "Add enhancements\nas you desire", subtitle: "Click to see more in details")
-                    
-                    ScrollView {
-                        VStack(spacing: 24){
-                            Text("Celestial Classic*")
-                                .font(regularFont(size: 32))
-                            
-                            Text("You get the bed all to yourself in our twin room. Same size as our double room, the twin room offers two comfortable single beds and plenty of space to relax.")
-                                .font(regularFont(size: 16))
-                                .multilineTextAlignment(.center)
-                            
-                            roomDetails
-                            
-                            roomAmenities
-                            
-                            optionSelections
-                            
-                            Spacer()
-                                .frame(height: 80)
-                            
-                        }
-                        .padding(.horizontal, 24)
+            VStack{
+                Header(title: "Add enhancements\nas you desire", subtitle: "Click to see more in details")
+                
+                ScrollView {
+                    VStack(spacing: 24){
+                        Text("Celestial Classic*")
+                            .font(regularFont(size: 32))
                         
-              
+                        Text("You get the bed all to yourself in our twin room. Same size as our double room, the twin room offers two comfortable single beds and plenty of space to relax.")
+                            .font(regularFont(size: 16))
+                            .multilineTextAlignment(.center)
+                        
+                        roomDetails
+                        
+                        roomAmenities
+                        
+                        optionSelections
+                        
+                        Spacer()
+                            .frame(height: 80)
+                        
+                    }
+                    .padding(.horizontal, 24)
+                    
+                    
                 }
-                
-                
-                
             }
+            .ignoresSafeArea(.container, edges: .top)
+            
             Miniplayer(animation: animation, expand: $expand)
             
                 .navigationBarHidden(true)
             
         }
-        .ignoresSafeArea(.container, edges: .top)
+        
         
     }
     
@@ -68,21 +67,21 @@ struct RoomDetailView: View {
             HStack(spacing: 32){
                 HStack(spacing: 11){
                     Ellipse()
-                    .frame(width: 24, height: 24)
-                    .foregroundColor(Color("AccentColor"))
-
+                        .frame(width: 24, height: 24)
+                        .foregroundColor(Color("AccentColor"))
+                    
                     
                     Text("2 People")
                 }
-            
+                
                 HStack(spacing: 11){
                     Ellipse()
-                    .frame(width: 24, height: 24)
-                    .foregroundColor(Color("AccentColor"))
+                        .frame(width: 24, height: 24)
+                        .foregroundColor(Color("AccentColor"))
                     
                     Text("15m/2 / 161 ft2")
                 }
-              
+                
             }
             
             Image("room")

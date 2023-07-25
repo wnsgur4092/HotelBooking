@@ -33,7 +33,7 @@ struct Miniplayer: View {
                 .resizable()
                 .frame(width: 40, height: 8)
                 .rotationEffect(.degrees(expand ? 0 : 180))
-                .padding(.vertical, expand ? 36 : 0)
+                .padding(.vertical, expand ? 40 : 0)
 
             
 //            Capsule()

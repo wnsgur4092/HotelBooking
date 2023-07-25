@@ -59,9 +59,7 @@
 		BF8BD1EB2A558143001B6C8B /* SwiftUIDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1EA2A558143001B6C8B /* SwiftUIDayView.swift */; };
 		BF8BD1ED2A558160001B6C8B /* DayRangeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1EC2A558160001B6C8B /* DayRangeIndicatorView.swift */; };
 		BF8BD1EF2A55817C001B6C8B /* DayRangeSelectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BD1EE2A55817C001B6C8B /* DayRangeSelectionHelper.swift */; };
-		BF8EBE602A6EC81200426FCD /* TotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE5F2A6EC81200426FCD /* TotalView.swift */; };
 		BF8EBE622A6ECF6300426FCD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE612A6ECF6300426FCD /* BlurView.swift */; };
-		BF8EBE892A6EE92500426FCD /* MiniTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE882A6EE92500426FCD /* MiniTotalView.swift */; };
 		BF8EBE8C2A6F9BFD00426FCD /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE8B2A6F9BFD00426FCD /* MiniPlayer.swift */; };
 		BF8EBE902A6FAB9B00426FCD /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE8F2A6FAB9B00426FCD /* VideoPlayerViewModel.swift */; };
 		BF8EBE952A6FCAE100426FCD /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EBE942A6FCAE100426FCD /* Header.swift */; };
@@ -127,9 +125,7 @@
 		BF8BD1EA2A558143001B6C8B /* SwiftUIDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDayView.swift; sourceTree = "<group>"; };
 		BF8BD1EC2A558160001B6C8B /* DayRangeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRangeIndicatorView.swift; sourceTree = "<group>"; };
 		BF8BD1EE2A55817C001B6C8B /* DayRangeSelectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRangeSelectionHelper.swift; sourceTree = "<group>"; };
-		BF8EBE5F2A6EC81200426FCD /* TotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalView.swift; sourceTree = "<group>"; };
 		BF8EBE612A6ECF6300426FCD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		BF8EBE882A6EE92500426FCD /* MiniTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTotalView.swift; sourceTree = "<group>"; };
 		BF8EBE8B2A6F9BFD00426FCD /* MiniPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
 		BF8EBE8F2A6FAB9B00426FCD /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		BF8EBE942A6FCAE100426FCD /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -329,8 +325,6 @@
 			children = (
 				BF8EBE612A6ECF6300426FCD /* BlurView.swift */,
 				BF8EBE8B2A6F9BFD00426FCD /* MiniPlayer.swift */,
-				BF8EBE5F2A6EC81200426FCD /* TotalView.swift */,
-				BF8EBE882A6EE92500426FCD /* MiniTotalView.swift */,
 			);
 			path = TotalView;
 			sourceTree = "<group>";
@@ -508,7 +502,6 @@
 				BF367AA62A36E104007B9AB5 /* AboutUsView.swift in Sources */,
 				BF5909272A38793200A63F11 /* RoomCard.swift in Sources */,
 				BF367AA42A36E0F7007B9AB5 /* AccomodationView.swift in Sources */,
-				BF8EBE892A6EE92500426FCD /* MiniTotalView.swift in Sources */,
 				BF8BD1E62A557CD0001B6C8B /* WhatsOnView.swift in Sources */,
 				BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */,
 				BF8EBE952A6FCAE100426FCD /* Header.swift in Sources */,
@@ -523,7 +516,6 @@
 				BF8417762A443DF300EBE11B /* Theme.swift in Sources */,
 				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
 				BF8EBE9F2A6FD28E00426FCD /* BookingDateViewModel.swift in Sources */,
-				BF8EBE602A6EC81200426FCD /* TotalView.swift in Sources */,
 				BF8BD1EB2A558143001B6C8B /* SwiftUIDayView.swift in Sources */,
 				BF59091B2A38726000A63F11 /* AccentButtonStyle.swift in Sources */,
 				BF8EBE972A6FCB6B00426FCD /* Fonts.swift in Sources */,
@@ -707,6 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotelBooking/Preview Content\"";
+				DEVELOPMENT_TEAM = L8QX5LU28U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HotelBooking/Info.plist;
@@ -739,6 +732,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotelBooking/Preview Content\"";
+				DEVELOPMENT_TEAM = L8QX5LU28U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HotelBooking/Info.plist;
