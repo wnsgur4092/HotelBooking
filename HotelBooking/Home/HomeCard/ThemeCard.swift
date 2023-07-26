@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct ThemeCard: View {
-    //MARK: - PROPERTIES
-    var themeName : String
-    var themeImage : String
-    
-    //MARK: - BODY
+    var themeName: String
+    var themeImage: String
+
     var body: some View {
         VStack{
             Text(themeName)
@@ -20,29 +18,33 @@ struct ThemeCard: View {
                 .foregroundColor(Color("PrimaryColor"))
                 .padding(.bottom, 24)
                 .padding(.horizontal, 27)
-            
-            Image(themeImage)
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: .infinity)
-                .padding(.bottom, 17)
-            
-            //            NavigationLink(destination: BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
-            //                .environmentObject(BookingViewModel())) {
-            //                    Text("Take me here".uppercased())
-            //                }
-            //                .buttonStyle(PrimaryButtonStyle(font: .custom("Poppins-Bold", size: 16)))
-            //                .padding(.horizontal, 18.5)
+
+            if let imageUrl = URL(string: themeImage) {
+                AsyncImage(url: imageUrl) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 280, height: 292)
+                            .padding(.bottom, 17)
+                    case .empty, .failure:
+                        ProgressView()
+                            .frame(width: 280, height: 292)
+                    default:
+                        ProgressView()
+                            .frame(width: 280, height: 292)
+                    }
+                }
+            }
+
             NavigationLink {
                 DateInputView()
             } label: {
                 Text("Take me here".uppercased())
-                    
             }
             .buttonStyle(PrimaryButtonStyle(font: boldFont(size: 16)))
             .padding(.horizontal, 18.5)
-            
-            
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 12.5)
@@ -53,9 +55,10 @@ struct ThemeCard: View {
     }
 }
 
-struct ThemeCard_Previews: PreviewProvider {
-    static var previews: some View {
-        ThemeCard(themeName: "Theme1", themeImage: "theme1")
-            .fixedSize()
-    }
-}
+
+//struct ThemeCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThemeCard(themeName: "Theme1", themeImage: URL(string: "https://example.com/image.jpg")!)
+//            .fixedSize()
+//    }
+//}

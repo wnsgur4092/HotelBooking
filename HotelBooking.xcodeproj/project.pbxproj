@@ -51,6 +51,14 @@
 		BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
 		BF5909302A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
 		BF5909312A3882B400A63F11 /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF59092E2A3882B400A63F11 /* RoomDetailView.swift */; };
+		BF6208B42A711B5400CF9670 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6208B32A711B5400CF9670 /* Room.swift */; };
+		BF6208B62A711B7400CF9670 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6208B52A711B7400CF9670 /* RoomViewModel.swift */; };
+		BF6208BB2A711EF000CF9670 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BF6208BA2A711EF000CF9670 /* Alamofire */; };
+		BF6208BE2A71277F00CF9670 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BF6208BD2A71277F00CF9670 /* ParseSwift */; };
+		BF6208C02A712E8100CF9670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6208BF2A712E8100CF9670 /* AppDelegate.swift */; };
+		BF6208C22A71308F00CF9670 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6208C12A71308F00CF9670 /* Example.swift */; };
+		BF6208C52A715AF300CF9670 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = BF6208C42A715AF300CF9670 /* URLImage */; };
+		BF6208C72A715AF300CF9670 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = BF6208C62A715AF300CF9670 /* URLImageStore */; };
 		BF782DCD2A43016400063345 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF782DCC2A43016400063345 /* OnBoardingView.swift */; };
 		BF8417732A443A0B00EBE11B /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8417722A443A0B00EBE11B /* ThemeCard.swift */; };
 		BF8417762A443DF300EBE11B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8417752A443DF300EBE11B /* Theme.swift */; };
@@ -117,6 +125,10 @@
 		BF5909262A38793200A63F11 /* RoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCard.swift; sourceTree = "<group>"; };
 		BF59092A2A38812900A63F11 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		BF59092E2A3882B400A63F11 /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
+		BF6208B32A711B5400CF9670 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		BF6208B52A711B7400CF9670 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		BF6208BF2A712E8100CF9670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF6208C12A71308F00CF9670 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		BF782DCC2A43016400063345 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		BF8417722A443A0B00EBE11B /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
 		BF8417752A443DF300EBE11B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -141,7 +153,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6208C72A715AF300CF9670 /* URLImageStore in Frameworks */,
 				BFC36CBD2A471EB600B50B41 /* HorizonCalendar in Frameworks */,
+				BF6208BE2A71277F00CF9670 /* ParseSwift in Frameworks */,
+				BF6208C52A715AF300CF9670 /* URLImage in Frameworks */,
+				BF6208BB2A711EF000CF9670 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +202,8 @@
 		BF367A742A36DEA7007B9AB5 /* HotelBooking */ = {
 			isa = PBXGroup;
 			children = (
+				BF6208C12A71308F00CF9670 /* Example.swift */,
+				BF6208BF2A712E8100CF9670 /* AppDelegate.swift */,
 				BF367AB22A36E2B5007B9AB5 /* Info.plist */,
 				BF367A752A36DEA7007B9AB5 /* HotelBookingApp.swift */,
 				BF367A772A36DEA7007B9AB5 /* ContentView.swift */,
@@ -243,6 +261,7 @@
 				BF8EBE8F2A6FAB9B00426FCD /* VideoPlayerViewModel.swift */,
 				BF8EBE9C2A6FD1C700426FCD /* HomeViewModel.swift */,
 				BF8EBE9E2A6FD28E00426FCD /* BookingDateViewModel.swift */,
+				BF6208B52A711B7400CF9670 /* RoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -296,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				BF8417752A443DF300EBE11B /* Theme.swift */,
+				BF6208B32A711B5400CF9670 /* Room.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -367,6 +387,10 @@
 			name = HotelBooking;
 			packageProductDependencies = (
 				BFC36CBC2A471EB600B50B41 /* HorizonCalendar */,
+				BF6208BA2A711EF000CF9670 /* Alamofire */,
+				BF6208BD2A71277F00CF9670 /* ParseSwift */,
+				BF6208C42A715AF300CF9670 /* URLImage */,
+				BF6208C62A715AF300CF9670 /* URLImageStore */,
 			);
 			productName = HotelBooking;
 			productReference = BF367A722A36DEA7007B9AB5 /* HotelBooking.app */;
@@ -442,6 +466,9 @@
 			mainGroup = BF367A692A36DEA7007B9AB5;
 			packageReferences = (
 				BFC36CBB2A471EB600B50B41 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+				BF6208B92A711EF000CF9670 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BF6208BC2A71277F00CF9670 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				BF6208C32A715AF300CF9670 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = BF367A732A36DEA7007B9AB5 /* Products */;
 			projectDirPath = "";
@@ -499,6 +526,7 @@
 				BF8BD1E42A557CAB001B6C8B /* CollectionCard.swift in Sources */,
 				BF367AB52A36E675007B9AB5 /* PrimaryButtonStyle.swift in Sources */,
 				BF367AA22A36E057007B9AB5 /* HomeView.swift in Sources */,
+				BF6208B62A711B7400CF9670 /* RoomViewModel.swift in Sources */,
 				BF367AA62A36E104007B9AB5 /* AboutUsView.swift in Sources */,
 				BF5909272A38793200A63F11 /* RoomCard.swift in Sources */,
 				BF367AA42A36E0F7007B9AB5 /* AccomodationView.swift in Sources */,
@@ -506,14 +534,17 @@
 				BF367AAA2A36E12A007B9AB5 /* OurStoryView.swift in Sources */,
 				BF8EBE952A6FCAE100426FCD /* Header.swift in Sources */,
 				BF8EBE622A6ECF6300426FCD /* BlurView.swift in Sources */,
+				BF6208C02A712E8100CF9670 /* AppDelegate.swift in Sources */,
 				BF8BD1EF2A55817C001B6C8B /* DayRangeSelectionHelper.swift in Sources */,
 				BF367A782A36DEA7007B9AB5 /* ContentView.swift in Sources */,
 				BF367AAC2A36E130007B9AB5 /* SeeDoView.swift in Sources */,
 				BF782DCD2A43016400063345 /* OnBoardingView.swift in Sources */,
 				BF367AA82A36E122007B9AB5 /* EatDrinkView.swift in Sources */,
+				BF6208C22A71308F00CF9670 /* Example.swift in Sources */,
 				BF8417732A443A0B00EBE11B /* ThemeCard.swift in Sources */,
 				BF59092F2A3882B400A63F11 /* RoomDetailView.swift in Sources */,
 				BF8417762A443DF300EBE11B /* Theme.swift in Sources */,
+				BF6208B42A711B5400CF9670 /* Room.swift in Sources */,
 				BF5909142A38701400A63F11 /* BookingDateView.swift in Sources */,
 				BF8EBE9F2A6FD28E00426FCD /* BookingDateViewModel.swift in Sources */,
 				BF8BD1EB2A558143001B6C8B /* SwiftUIDayView.swift in Sources */,
@@ -871,6 +902,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BF6208B92A711EF000CF9670 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BF6208BC2A71277F00CF9670 /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		BF6208C32A715AF300CF9670 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		BFC36CBB2A471EB600B50B41 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
@@ -882,6 +937,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BF6208BA2A711EF000CF9670 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6208B92A711EF000CF9670 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BF6208BD2A71277F00CF9670 /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6208BC2A71277F00CF9670 /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+		BF6208C42A715AF300CF9670 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6208C32A715AF300CF9670 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		BF6208C62A715AF300CF9670 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF6208C32A715AF300CF9670 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
 		BFC36CBC2A471EB600B50B41 /* HorizonCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BFC36CBB2A471EB600B50B41 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;

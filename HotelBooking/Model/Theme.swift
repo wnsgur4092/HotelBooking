@@ -6,18 +6,43 @@
 //
 
 import Foundation
+import SwiftUI
+import ParseSwift
 
-struct Theme : Identifiable {
-    var id : UUID = UUID()
-    var themeName : String
-    var themeImageNmae : String
+struct Theme: ParseObject {
+    var originalData: Data?
+    
+    var objectId: String?
+    var createdAt: Date?
+    var updatedAt: Date?
+    var ACL: ParseACL?
+
+    // Custom keys
+    var themeName: String?
+    var themeImage: ParseFile?
+
+    // Parse keys
+    static var className: String {
+        return "Theme"
+    }
 }
 
-
-let themeLists : [Theme] = [
-    Theme(themeName: "Perfect Date Night", themeImageNmae: "theme1"),
-    Theme(themeName: "Friends & Family", themeImageNmae: "theme2"),
-    Theme(themeName: "Friend’s Night Out", themeImageNmae: "theme3"),
-    Theme(themeName: "Sole Holiday", themeImageNmae: "theme4"),
-    Theme(themeName: "Work & Life", themeImageNmae: "theme5")
-]
+class HomeViewModel : ObservableObject {
+    @Published var themes = [Theme]()
+    
+    func loadThemes() {
+        let query = Theme.query()
+        
+        query.find { result in
+            switch result {
+            case .success(let themes) :
+                DispatchQueue.main.async {
+                    self.themes = themes
+                    print("fetching themes: \(themes.count)")
+                }
+            case .failure(let error) :
+                print("Error fetching themes: \(error)")
+            }
+        }
+    }
+}

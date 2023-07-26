@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct HomeView: View {
     //MARK: - PROPERTIES
-    @StateObject var homeViewModel : HomeViewModel
-    var themes: [Theme] = themeLists
+    @ObservedObject var homeViewModel : HomeViewModel
     @State var showBookingDateView = false
     
     //MARK: - BODY
@@ -21,25 +21,30 @@ struct HomeView: View {
                     .padding(.bottom, 20)
                 
                 themeSlider
+                    .onAppear(perform: homeViewModel.loadThemes)
+                
+                Text("Hello World")
                 
                     .navigationBarHidden(true)
             }
             .ignoresSafeArea(.container, edges: .top)
         }
+        
     }
     
     //MARK: - COMPONENTS
-    fileprivate var themeSlider : some View {
-        ScrollView(.horizontal, showsIndicators: false){
-            HStack(spacing: 20){
-                ForEach(themes) { theme in
-                    ThemeCard(themeName: theme.themeName, themeImage: theme.themeImageNmae)
+    fileprivate var themeSlider: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 28) {
+                ForEach(homeViewModel.themes, id: \.objectId) { theme in
+                    ThemeCard(themeName: theme.themeName ?? "", themeImage: theme.themeImage?.url?.absoluteString ?? "")
                 }
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 24)
             .padding(.bottom, 20)
         }
     }
+
 }
 
 
