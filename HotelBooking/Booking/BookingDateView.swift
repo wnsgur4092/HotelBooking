@@ -53,18 +53,6 @@ struct BookingDateView: View {
     //MARK: - BODY
     var body: some View {
         VStack{
-            HStack{
-                Image(systemName: "chevron.left")
-                Spacer()
-            }
-            
-            HStack{
-                Text("Select Checkout date")
-
-                Spacer()
-            }
-            .padding(.bottom, 32)
-            
             
             CalendarViewRepresentable(
                 calendar: calendar,
@@ -151,13 +139,6 @@ struct BookingDateView: View {
                     scrollPosition: .centered,
                     animated: false)
             }
-            
-            NavigationLink {
-                BookingRoomView()
-            } label: {
-                Text("NEXT")
-            }
-
         }
         .padding(.horizontal, 32)
         .navigationBarHidden(true)

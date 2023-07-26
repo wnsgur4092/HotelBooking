@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ThemeCard: View {
     var theme: Theme
-    @StateObject private var imageLoader = ImageLoader()
+    @ObservedObject private var imageLoader = ImageLoader()
     
     var body: some View {
         Group {

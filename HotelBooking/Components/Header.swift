@@ -28,7 +28,7 @@ struct Header: View {
         .multilineTextAlignment(.center)
         .frame(maxWidth: .infinity)
         .background(mainColor)
-        .clipShape(RoundedCorners(tl: 0, tr: 0, bl: 16, br: 16))
+        .clipShape(RoundedCorners(tl: 0, tr: 0, bl: 22, br: 22))
     }
 }
 

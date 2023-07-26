@@ -19,6 +19,8 @@ struct HotelBookingApp: App {
         
         WindowGroup {
             ContentView()
+//            BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
+            
                 .environment(\.urlImageService, urlImageService)
         }
     }

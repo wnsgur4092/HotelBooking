@@ -211,13 +211,13 @@
 				BF367AB22A36E2B5007B9AB5 /* Info.plist */,
 				BF367A752A36DEA7007B9AB5 /* HotelBookingApp.swift */,
 				BF367A772A36DEA7007B9AB5 /* ContentView.swift */,
+				BF6208CC2A718BD300CF9670 /* Utilities */,
 				BF8417742A443DE700EBE11B /* Model */,
 				BF367AA02A36E02D007B9AB5 /* ViewModel */,
 				BF367A9F2A36E024007B9AB5 /* View */,
 				BF367AB32A36E5F7007B9AB5 /* Style */,
 				BF367AAD2A36E235007B9AB5 /* Fonts */,
 				BF367A7B2A36DEA8007B9AB5 /* Preview Content */,
-				BF6208C82A71676E00CF9670 /* ImageLoader.swift */,
 			);
 			path = HotelBooking;
 			sourceTree = "<group>";
@@ -305,6 +305,14 @@
 				BF8EBE8A2A6EE92900426FCD /* TotalView */,
 			);
 			path = Booking;
+			sourceTree = "<group>";
+		};
+		BF6208CC2A718BD300CF9670 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BF6208C82A71676E00CF9670 /* ImageLoader.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		BF8417712A443A0300EBE11B /* Home */ = {

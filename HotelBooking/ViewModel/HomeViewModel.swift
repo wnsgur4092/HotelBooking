@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import Alamofire
+//import Alamofire
 
 class HomeViewModel : ObservableObject {
     @Published var themes = [Theme]()

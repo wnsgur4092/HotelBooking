@@ -9,16 +9,25 @@ import SwiftUI
 
 struct DateInputView: View {
     var body: some View {
-        VStack{
-            Text("Calendar")
+        VStack(spacing: 20){
+            Header(title: "Pick you up the best dates", subtitle: "Select the date")
+                
             
-            NavigationLink {
-                BookingRoomView()
-            } label: {
-                Text("NEXT")
-            }
+
+                
+                BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
+    
+                NavigationLink {
+                    BookingRoomView(roomViewModel: RoomViewModel())
+                } label: {
+                    Text("NEXT")
+                }
+                
             
+            
+
         }
+        .ignoresSafeArea(.container, edges: .top)
         .navigationBarHidden(true)
     }
 }
