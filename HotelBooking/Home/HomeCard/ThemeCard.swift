@@ -8,52 +8,55 @@
 import SwiftUI
 
 struct ThemeCard: View {
-    var themeName: String
-    var themeImage: String
-
+    var theme: Theme
+    @StateObject private var imageLoader = ImageLoader()
+    
     var body: some View {
-        VStack{
-            Text(themeName)
-                .font(.custom("Poppins-Medium", size: 24))
-                .foregroundColor(Color("PrimaryColor"))
-                .padding(.bottom, 24)
-                .padding(.horizontal, 27)
-
-            if let imageUrl = URL(string: themeImage) {
-                AsyncImage(url: imageUrl) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 280, height: 292)
-                            .padding(.bottom, 17)
-                    case .empty, .failure:
-                        ProgressView()
-                            .frame(width: 280, height: 292)
-                    default:
-                        ProgressView()
-                            .frame(width: 280, height: 292)
+        Group {
+            if let image = imageLoader.image {
+                VStack{
+                    Text(theme.themeName ?? "")
+                        .font(.custom("Poppins-Medium", size: 24))
+                        .foregroundColor(Color("PrimaryColor"))
+                        .padding(.bottom, 24)
+                        .padding(.horizontal, 27)
+                    
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity)
+                        .padding(.bottom, 17)
+                    
+                    NavigationLink {
+                        DateInputView()
+                    } label: {
+                        Text("Take me here".uppercased())
                     }
+                    .buttonStyle(PrimaryButtonStyle(font: boldFont(size: 16)))
+                    .padding(.horizontal, 18.5)
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.top, 12.5)
+                .padding(.bottom, 19.5)
+                .background(Color.white)
+                .cornerRadius(8.8)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+            } else {
+                ProgressView()
+                    .frame(width: 280, height: 292) // Set a specific frame size
+                    .background(Color.white)
+                    .cornerRadius(8.8)
+                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
             }
-
-            NavigationLink {
-                DateInputView()
-            } label: {
-                Text("Take me here".uppercased())
-            }
-            .buttonStyle(PrimaryButtonStyle(font: boldFont(size: 16)))
-            .padding(.horizontal, 18.5)
         }
-        .frame(maxWidth: .infinity)
-        .padding(.top, 12.5)
-        .padding(.bottom, 19.5)
-        .background(Color.white)
-        .cornerRadius(8.8)
-        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+        .onAppear {
+            if let imageUrl = theme.themeImage?.url {
+                imageLoader.load(url: imageUrl)
+            }
+        }
     }
 }
+
 
 
 //struct ThemeCard_Previews: PreviewProvider {

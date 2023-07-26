@@ -1,8 +1,8 @@
 //
-//  Theme.swift
+//  Collection.swift
 //  HotelBooking
 //
-//  Created by JunHyuk Lim on 22/6/2023.
+//  Created by JunHyuk Lim on 27/7/2023.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import SwiftUI
 import ParseSwift
 import Alamofire
 
-struct Theme: ParseObject {
+struct Collection : ParseObject {
     var originalData: Data?
     
     var objectId: String?
@@ -19,11 +19,12 @@ struct Theme: ParseObject {
     var ACL: ParseACL?
 
     // Custom keys
-    var themeName: String?
-    var themeImage: ParseFile?
+    var collectionName: String?
+    var collectionImage: ParseFile?
+    var collectionDescription : String?
 
     // Parse keys
     static var className: String {
-        return "Theme"
+        return "Collection"
     }
 }
