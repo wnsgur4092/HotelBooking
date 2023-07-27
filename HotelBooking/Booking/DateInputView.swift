@@ -18,6 +18,8 @@ struct DateInputView: View {
                 BookingDateView(calendar: Calendar.current, monthsLayout: .vertical)
     
                 NavigationLink {
+//                    TestView(roomViewModel: RoomViewModel())
+                    
                     BookingRoomView(roomViewModel: RoomViewModel())
                 } label: {
                     Text("NEXT")

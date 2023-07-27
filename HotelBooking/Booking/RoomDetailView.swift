@@ -51,7 +51,7 @@ struct RoomDetailView: View {
             
             Miniplayer(animation: animation, expand: $expand)
             
-                .navigationBarHidden(true)
+//                .navigationBarHidden(true)
             
         }
         

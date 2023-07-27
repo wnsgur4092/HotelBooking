@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @State var selection : Int = 0
     
     var body: some View {
         TabView {
@@ -16,17 +16,20 @@ struct ContentView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .tag(0)
                 .environmentObject(BookingViewModel())
             
             AccomodationView()
                 .tabItem {
                     Label("Accomodation", systemImage: "bed.double")
                 }
+                .tag(1)
             
             EatDrinkView()
                 .tabItem {
                     Label("Eat & Drink", systemImage: "fork.knife")
                 }
+                .tag(2)
         }
     }
 }

@@ -14,7 +14,7 @@ struct BookingRoomView: View {
         VStack{
             Header(title: "Click below\nsadsadas", subtitle: "Click to see more in details")
             
-           
+            
             ScrollView(.vertical, showsIndicators: true) {
                 VStack{
                     ForEach(roomViewModel.rooms, id: \.objectId) {
@@ -23,11 +23,14 @@ struct BookingRoomView: View {
                         
                     }
                 }
+                .onAppear {
+                    roomViewModel.loadThemes()
+                }
             }
-            
+            .navigationBarHidden(true)
         }
         .ignoresSafeArea(.container, edges: .top)
-        .navigationBarHidden(true)
+
     }
 }
 

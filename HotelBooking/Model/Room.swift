@@ -20,10 +20,13 @@ struct Room: ParseObject {
 
     // Custom keys
     var roomName: String?
+    var roomSubName : String?
+    var roomDescription : String?
     var roomImage : ParseFile?
     var roomTheme: Theme?
     var roomSizeInMeter : Int?
     var roomSizeInFeet : Int?
+    var roomPrice : Int?
 
     // Parse keys
     static var className: String {

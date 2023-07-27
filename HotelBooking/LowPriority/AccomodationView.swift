@@ -9,7 +9,15 @@ import SwiftUI
 
 struct AccomodationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            NavigationLink {
+                BookingRoomView(roomViewModel: RoomViewModel())
+            } label: {
+                Text("CHECK")
+            }
+        }
+  
+
     }
 }
 
